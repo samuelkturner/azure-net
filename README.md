@@ -1,5 +1,15 @@
-# Building a SOC + Honeynet in Azure (Live Traffic)
+# Azure Cloud Honeynet & Microsoft Sentinel SIEM Implementation
 ![Cloud Honeynet / SOC](https://i.imgur.com/ZWxe03e.jpg)
+
+## Technologies Used
+- Microsoft Azure
+- Microsoft Sentinel (SIEM)
+- Log Analytics Workspace
+- Kusto Query Language (KQL)
+- Windows Event Logs
+- Linux Syslog
+- Network Security Groups (NSG)
+- Cloud Security Hardening
 
 ## Introduction
 
@@ -71,8 +81,22 @@ Stop Time	2023-03-19 15:37
 | SecurityIncident         | 0
 | AzureNetworkAnalytics_CL | 0
 
+## Security Outcomes
+- Security incidents reduced from 212 to 0 after hardening
+- Malicious network flows reduced from 3078 to 0
+- Alerts eliminated after access restrictions implemented
+- Demonstrated effectiveness of least-exposure network architecture
+
 ## Conclusion
 
 In this project, a mini honeynet was constructed in Microsoft Azure and log sources were integrated into a Log Analytics workspace. Microsoft Sentinel was employed to trigger alerts and create incidents based on the ingested logs. Additionally, metrics were measured in the insecure environment before security controls were applied, and then again after implementing security measures. It is noteworthy that the number of security events and incidents were drastically reduced after the security controls were applied, demonstrating their effectiveness.
 
 It is worth noting that if the resources within the network were heavily utilized by regular users, it is likely that more security events and alerts may have been generated within the 24-hour period following the implementation of the security controls.
+
+## SOC Workflow Demonstrated
+- Log ingestion and normalization
+- Detection rule triggering
+- Alert generation
+- Incident creation in Sentinel
+- Investigation using dashboards
+- Security control validation
